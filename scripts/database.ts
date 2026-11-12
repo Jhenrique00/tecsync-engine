@@ -13,7 +13,7 @@ export async function startDatabase() {
   if(existsSync(lock)) {
     const pid=Number(readFileSync(lock,'utf8'));
     let alive=false; try {process.kill(pid,0);alive=true;} catch {}
-    if(alive) throw new Error('A Tectique já está aberta. Feche o outro terminal com Ctrl+C antes de iniciar novamente.');
+    if(alive) throw new Error('A Tecsync Engine já está aberta. Feche o outro terminal com Ctrl+C antes de iniciar novamente.');
     unlinkSync(lock);
   }
   writeFileSync(lock,String(process.pid),{flag:'wx'});

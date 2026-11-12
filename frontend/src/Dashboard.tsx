@@ -62,12 +62,12 @@ export function Dashboard({onSelect}:{onSelect:(item:Automation)=>void}){
       await loadRoutines();
     }catch(e){setError(readableError(e));}finally{setBusy(false);}
   }
-  if(checking)return <div className="page-loading"><Icon name="loader"/><p>Carregando Tectique…</p></div>;
+  if(checking)return <div className="page-loading"><Icon name="loader"/><p>Carregando Tecsync Engine…</p></div>;
   if(!account)return <AuthScreen onAuthenticated={setAccount}/>;
   const role=workspaces.find(w=>w.id===wid)?.role;
   return <div className="workspace">
     <header className="workspace-header">
-      <a className="brand" href="#/"><Icon name="zap"/>Tectique<span className="beta">WORKSPACE</span></a>
+      <a className="brand" href="#/"><Icon name="zap"/>Tecsync Engine<span className="beta">WORKSPACE</span></a>
       <div className="workspace-actions"><span className="account-chip"><span className="account-avatar">{account.name.charAt(0).toUpperCase()}</span><span><strong>{account.name}</strong><small>{account.email}</small></span></span>
         <button className="btn secondary small" disabled={busy} onClick={()=>void logout()}>Sair</button>
       </div>
@@ -78,7 +78,7 @@ export function Dashboard({onSelect}:{onSelect:(item:Automation)=>void}){
         {NAV.map(([id,icon,label,state])=><button className={'side-item '+(section===id?'active':'')} key={id} onClick={()=>go(id)} aria-current={section===id?'page':undefined}>
           <Icon name={icon}/>{label}<span className={'dot '+(state==='ok'?'ok':state==='part'?'part':'')} title={state==='ok'?'Em funcionamento':state==='part'?'Parcialmente implementado':'Em desenvolvimento'}/></button>)}
         <div className="legend"><span><i className="ok"/> Em funcionamento</span><span><i className="part"/> Parcial</span><span><i/> Em desenvolvimento</span></div>
-        <p className="workspace-note"><Icon name="shield-check"/> Agendamentos só executam enquanto a Tectique estiver aberta.</p>
+        <p className="workspace-note"><Icon name="shield-check"/> Agendamentos só executam enquanto a Tecsync Engine estiver aberta.</p>
       </aside>
       <main className={'workspace-content'+(section==='builder'?' wide':'')} id="main">
         {error&&<div className="alert error" role="alert">{error}</div>}
@@ -109,7 +109,7 @@ export function Dashboard({onSelect}:{onSelect:(item:Automation)=>void}){
         {section==='builder'&&(wid?<Builder key={wid+(builderFlow??'')} wid={wid} role={role} initialFlow={builderFlow}/>:<p role="status">Carregando workspace…</p>)}
         {section==='chat'&&<Chat/>}{section==='crm'&&wid&&<Crm key={wid} wid={wid} role={role}/>}{section==='admin'&&<Admin/>}{section==='finance'&&<Finance/>}
         {section==='integrations'&&<Integrations wid={wid} role={role}/>}
-        {section==='history'&&<div><Head eyebrow="REGISTROS" title="Histórico e execuções">Tudo o que a Tectique executou e salvou na sua conta, com etapas, erros e nova tentativa.</Head>
+        {section==='history'&&<div><Head eyebrow="REGISTROS" title="Histórico e execuções">Tudo o que a Tecsync Engine executou e salvou na sua conta, com etapas, erros e nova tentativa.</Head>
           <SubTabs tabs={HIST_TABS} value={histTab} onChange={t=>go('history',t)}/>
           {histTab==='runs'&&<Runs wid={wid}/>}
           {histTab==='reports'&&<section>

@@ -6,9 +6,9 @@ export function Header({ onDashboard }: { onDashboard: () => void }) {
   return (
     <header>
       <div className="nav wrap">
-        <a className="brand" href="#/" aria-label="Tectique início">
+        <a className="brand" href="#/" aria-label="Tecsync Engine início">
           <Icon name="zap" />
-          Tectique<span className="beta">ALPHA</span>
+          Tecsync Engine<span className="beta">ALPHA</span>
         </a>
         <nav
           id="nav-links"
@@ -106,7 +106,7 @@ const faqs = [
   ],
   [
     "Funciona com o navegador fechado?",
-    "Sim, você pode fechar a aba do navegador. O agendador continua funcionando enquanto o servidor Tectique estiver aberto no terminal. Com o computador ou programa desligado, as rotinas ficam suspensas.",
+    "Sim, você pode fechar a aba do navegador. O agendador continua funcionando enquanto o servidor Tecsync Engine estiver aberto no terminal. Com o computador ou programa desligado, as rotinas ficam suspensas.",
   ],
   [
     "Quais integrações estão disponíveis?",
@@ -114,7 +114,7 @@ const faqs = [
   ],
   [
     "Onde meus relatórios ficam salvos?",
-    "Relatórios e rotinas ficam no PostgreSQL local, associados à sua conta. O histórico é mantido ao reiniciar a Tectique, desde que a pasta .local seja preservada.",
+    "Relatórios e rotinas ficam no PostgreSQL local, associados à sua conta. O histórico é mantido ao reiniciar a Tecsync Engine, desde que a pasta .local seja preservada.",
   ],
 ];
 export function FAQ() {

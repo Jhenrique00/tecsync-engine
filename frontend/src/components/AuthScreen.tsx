@@ -13,7 +13,7 @@ export function AuthScreen({onAuthenticated}:{onAuthenticated:(user:User)=>void}
   }
   return <div className="auth-layout">
     <div className="auth-info">
-      <a href="#/" className="brand"><Icon name="zap"/> Tectique <span className="beta">WORKSPACE</span></a>
+      <a href="#/" className="brand"><Icon name="zap"/> Tecsync Engine <span className="beta">WORKSPACE</span></a>
       <div className="auth-blurb"><span className="eyebrow">SEU ESPAÇO DE AUTOMAÇÃO</span><h1>Mais controle.<br/><span>Menos trabalho.</span></h1>
         <p>Seus relatórios, histórico e rotinas do GitHub organizados em um único lugar, com acesso protegido por conta.</p>
         <div className="auth-benefits"><span><Icon name="shield-check"/> Dados separados por usuário</span><span><Icon name="list-checks"/> Relatórios salvos no PostgreSQL</span><span><Icon name="calendar-clock"/> Rotinas automáticas programadas</span></div>
@@ -21,7 +21,7 @@ export function AuthScreen({onAuthenticated}:{onAuthenticated:(user:User)=>void}
       <small>Funciona localmente no seu computador.</small>
     </div>
     <div className="auth-panel"><div className="auth-card">
-      <span className="eyebrow">TECTIQUE ANALYTICS</span><h2>{mode==='login'?'Bem-vindo de volta':'Crie seu espaço'}</h2>
+      <span className="eyebrow">TECSYNC ENGINE</span><h2>{mode==='login'?'Bem-vindo de volta':'Crie seu espaço'}</h2>
       <p>{mode==='login'?'Entre na sua conta para acessar seus relatórios.':'Cadastre-se para salvar suas análises e criar rotinas.'}</p>
       <div className="auth-tabs"><button type="button" className={mode==='login'?'selected':''} onClick={()=>{setMode('login');setError('');}}>Entrar</button><button type="button" className={mode==='register'?'selected':''} onClick={()=>{setMode('register');setError('');}}>Criar conta</button></div>
       <form onSubmit={submit} className="auth-form">
@@ -29,8 +29,8 @@ export function AuthScreen({onAuthenticated}:{onAuthenticated:(user:User)=>void}
         <label>E-mail<input required type="email" maxLength={254} autoComplete="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="voce@exemplo.com"/></label>
         <label>Senha<input required type="password" minLength={8} maxLength={128} autoComplete={mode==='login'?'current-password':'new-password'} value={password} onChange={e=>setPassword(e.target.value)} placeholder="Mínimo de 8 caracteres"/></label>
         {error&&<div role="alert" className="alert error">{error}</div>}
-        <button type="submit" disabled={loading} className="btn primary auth-submit">{loading?'Processando…':mode==='login'?'Entrar na Tectique':'Criar minha conta'} <Icon name="arrow-right"/></button>
-      </form><p className="auth-foot">Os dados são armazenados no PostgreSQL local da Tectique.</p>
+        <button type="submit" disabled={loading} className="btn primary auth-submit">{loading?'Processando…':mode==='login'?'Entrar na Tecsync Engine':'Criar minha conta'} <Icon name="arrow-right"/></button>
+      </form><p className="auth-foot">Os dados são armazenados no PostgreSQL local da Tecsync Engine.</p>
     </div></div>
   </div>;
 }

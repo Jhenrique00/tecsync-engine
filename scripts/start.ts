@@ -13,7 +13,7 @@ async function shutdown(code=0){
   process.stdin.pause();
   try{await closeServer?.();}catch(e){code=1;console.error('Servidor:',message(e));}
   try{await database?.stop();}catch(e){code=1;console.error('PostgreSQL:',message(e));}
-  console.log(code===0?'Tectique encerrada com seguranca.':'Encerramento incompleto. Confira os erros acima.');
+  console.log(code===0?'Tecsync Engine encerrada com seguranca.':'Encerramento incompleto. Confira os erros acima.');
   process.exitCode=code;
 }
 // Raw terminal mode consumes Ctrl+C in this process instead of sending a console-wide
@@ -27,6 +27,6 @@ process.on('SIGTERM',()=>void shutdown());
 try{
   database=await startDatabase();
   closeServer=await startServer(database.url,true);
-  console.log('Tectique pronta: http://127.0.0.1:8000');
+  console.log('Tecsync Engine pronta: http://127.0.0.1:8000');
   console.log('PARA FECHAR: pressione Ctrl+C uma vez nesta janela.');
 }catch(e){console.error('Falha ao iniciar:',message(e));await shutdown(1);}

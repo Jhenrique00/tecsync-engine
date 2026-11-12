@@ -38,7 +38,7 @@ export function Landing({
             </h1>
             <p className="lead">
               {
-                "Automatize tarefas repetitivas, acompanhe informações importantes e conecte serviços em um único lugar. Você configura. A Tectique executa."
+                "Automatize tarefas repetitivas, acompanhe informações importantes e conecte serviços em um único lugar. Você configura. A Tecsync Engine executa."
               }
             </p>
             <div className="actions">
@@ -111,7 +111,7 @@ export function Landing({
           <div className="hero-bottom">
             <span>{"MENOS REPETIÇÃO. MAIS POSSIBILIDADES."}</span>
             <a href="#produto">
-              {"Conheça a Tectique "}
+              {"Conheça a Tecsync Engine "}
               <Icon name="arrow-down" className="" />
             </a>
           </div>
@@ -260,7 +260,7 @@ export function Landing({
               <aside>
                 <a className="brand" href="#">
                   <Icon name="zap" className="" />
-                  {"Tectique"}
+                  {"Tecsync Engine"}
                 </a>
                 <span className="side-item active">
                   <Icon name="layout-dashboard" className="" />
@@ -358,7 +358,7 @@ export function Landing({
           </div>
           <div className="center">
             <button className="btn secondary" data-demo="">
-              {"Abrir painel da Tectique "}
+              {"Abrir painel da Tecsync Engine "}
               <Icon name="arrow-up-right" className="" />
             </button>
           </div>
@@ -490,7 +490,7 @@ export function Landing({
               <h2>{"Automatize com controle."}</h2>
               <p>
                 {
-                  "A Tectique está sendo projetada para dar visibilidade sobre suas automações, permissões e execuções."
+                  "A Tecsync Engine está sendo projetada para dar visibilidade sobre suas automações, permissões e execuções."
                 }
               </p>
               <ul>
@@ -545,7 +545,7 @@ export function Landing({
             {"e organizar suas rotinas digitais."}
           </p>
           <button className="btn primary" data-demo="">
-            {"Começar com a Tectique "}
+            {"Começar com a Tecsync Engine "}
             <Icon name="arrow-right" className="" />
           </button>
           <small>{"Abrir painel · Sem cadastro nesta versão local"}</small>
@@ -556,7 +556,7 @@ export function Landing({
           <div>
             <a className="brand" href="#">
               <Icon name="zap" className="" />
-              {"Tectique"}
+              {"Tecsync Engine"}
             </a>
             <p>
               {"Menos tarefas repetitivas."}
@@ -584,7 +584,7 @@ export function Landing({
           </div>
         </div>
         <div className="footer-bottom">
-          <span>{"© 2026 Tectique"}</span>
+          <span>{"© 2026 Tecsync Engine"}</span>
           <span>
             {"Feita para deixar o trabalho fluir. "}
             <Icon name="zap" className="" />

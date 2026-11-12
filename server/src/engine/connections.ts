@@ -33,7 +33,7 @@ export async function httpCall(ctx:BlockContext,c:any){
   const cred=httpCredential.parse(parseConnection('http',await ctx.credential(c.connection,'http')));
   const url=checkedUrl(c.url,cred.host),target=await publicTarget(cred.host);
   ctx.signal.throwIfAborted();
-  const headers:Record<string,string>={Accept:'application/json','Accept-Encoding':'identity','User-Agent':'Tectique/0.8'};
+  const headers:Record<string,string>={Accept:'application/json','Accept-Encoding':'identity','User-Agent':'Tecsync-Engine/0.8'};
   if(cred.token)headers[cred.header]=cred.header==='Authorization'?`Bearer ${cred.token}`:cred.token;
   const body=['GET','HEAD'].includes(c.method)?undefined:JSON.stringify(c.body??{});
   if(body&&Buffer.byteLength(body)>32000)throw new Error('Corpo HTTP excede 32 KB.');

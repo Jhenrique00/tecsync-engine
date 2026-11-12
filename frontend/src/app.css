@@ -235,7 +235,7 @@ select:focus-visible {
     flex-wrap: wrap;
   }
 }
-/* Tectique Workspace v0.4 */
+/* Tecsync Engine Workspace v0.4 */
 .page-loading{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;color:var(--muted)}
 .page-loading svg{animation:spin 1s linear infinite;color:var(--primary)}
 .auth-layout{display:grid;grid-template-columns:minmax(350px,1fr) minmax(430px,1fr);min-height:100vh;background:var(--bg)}

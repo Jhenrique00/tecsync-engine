@@ -23,6 +23,6 @@ export function WebhookPanel({wid,fid,role,dirty}:{wid:string;fid:string;role?:R
       {state?.token&&<label>Token — copie agora; não será exibido novamente<input readOnly type="password" value={state.token} onFocus={e=>e.target.select()}/><button className="btn secondary small" onClick={()=>navigator.clipboard.writeText(state.token!).catch(()=>setError('Selecione o campo do token e copie com Ctrl+C.'))}>Copiar token</button></label>}
     </>}
     {error&&<p role="alert">{error}</p>}
-    <p className="muted-note">No computador, o endereço recebe chamadas locais enquanto a Tectique estiver aberta. Serviços externos precisarão de hospedagem com HTTPS, em uma etapa futura. Não envie senhas no corpo: campos sensíveis são ocultados antes de entrar no fluxo.</p>
+    <p className="muted-note">No computador, o endereço recebe chamadas locais enquanto a Tecsync Engine estiver aberta. Serviços externos precisarão de hospedagem com HTTPS, em uma etapa futura. Não envie senhas no corpo: campos sensíveis são ocultados antes de entrar no fluxo.</p>
   </div>;
 }

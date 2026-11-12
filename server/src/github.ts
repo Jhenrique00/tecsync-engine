@@ -14,7 +14,7 @@ export function createGitHubService(fetcher: typeof fetch = fetch) {
   const cache = new Map<string, {until: number; report: any}>();
   async function get(path: string, empty = false) {
     let url = new URL(path, 'https://api.github.com');
-    const headers: Record<string,string> = {'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'Tectique'};
+    const headers: Record<string,string> = {'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'Tecsync Engine'};
     if(process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
     for(let i=0;i<4;i++) {
       let res: Response;

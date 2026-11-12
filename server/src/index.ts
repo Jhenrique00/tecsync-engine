@@ -22,7 +22,7 @@ export async function startServer(connectionString:string,serveFrontend=false){
   const stopScheduler=startScheduler(pool);
   const engine=startEngine(pool,{reportService:githubReport});
   hooks.nudge=engine.nudge;
-  console.log('Tectique API: http://127.0.0.1:8000');
+  console.log('Tecsync Engine API: http://127.0.0.1:8000');
   return async()=>{
     await stopScheduler();
     await engine.stop();
